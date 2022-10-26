@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute"
 import Secure from "../Secure/Secure"
 import Signup from "../Signup/Signup"
 import FAQ from "../FAQ/FAQ"
+import Profile from "../Profile/Profile"
 
  export const sojib=createBrowserRouter([
     { path:'/' , element: <Main/>, children: [ 
@@ -32,6 +33,7 @@ import FAQ from "../FAQ/FAQ"
         loader:({params})=>{ 
           return fetch(`http://localhost:5000/details/${params.id}`)
         }, 
-        element:<Courseinfo></Courseinfo> }
+        element:<Courseinfo></Courseinfo> },
+        {path:'profile', element:<PrivateRoute> <Profile></Profile> </PrivateRoute> }
         
     ] }])
