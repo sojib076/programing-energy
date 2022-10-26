@@ -1,0 +1,26 @@
+import React from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
+import Singlecourse from '../Singlecourse/Singlecourse';
+
+const Courses = () => {
+    const alldatas = useLoaderData()
+    console.log(alldatas);
+    return (
+        <div>
+            <div className='lg:grid lg:grid-cols-3 '> 
+                <div className='flex flex-wrap lg:flex-col lg:m-4 justify-evenly lg:justify-start m-5'> 
+                   {
+                    alldatas.map(data => <Link to={`/course/${data.id}`} className=' lg:m-5 text-slate-50 bg-slate-600 lg:p-5 m-3 p-3'  >{data.name} </Link>)
+                   }
+                </div>
+                <div className='col-span-2 grid lg:grid-cols-2 gap-5 justify-center' > 
+                  { 
+                    alldatas.map(data => <Singlecourse key={data.id} data={data}> </Singlecourse>)
+                  }
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Courses;
