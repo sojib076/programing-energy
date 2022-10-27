@@ -6,9 +6,7 @@ import { authContex } from '../../Contexs/UserContext';
 const Header = () => {
      const {user ,logout,loading} = useContext(authContex)
                 
-                if (loading) {
-                    return <div>Loading...</div>
-                }
+
 
     return (
         <div>

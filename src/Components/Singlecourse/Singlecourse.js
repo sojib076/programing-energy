@@ -14,7 +14,7 @@ const Singlecourse = ({data}) => {
 
                         <h2 className="card-title">{name}</h2>
                         <p>{intro}</p>
-                        <p> ${price}</p>
+                        <p> {price} TK</p>
                         <div className="card-actions">
                            
                         </div>
