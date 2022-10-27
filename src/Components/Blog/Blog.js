@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='lg:flex  ' >
+        <div className='lg:flex overflow-hidden ' >
             <div className="card w-80 bg-slate-400 text-primary-content ">
                 <div className="card-body">
                     <h2 className="card-title">What is cors</h2>
