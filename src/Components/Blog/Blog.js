@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className='lg:flex  ' >
-            <div className="card w-96 bg-slate-400 text-primary-content ">
+            <div className="card w-80 bg-slate-400 text-primary-content ">
                 <div className="card-body">
                     <h2 className="card-title">What is cors</h2>
                     <p> Cross-origin resource sharing (CORS) is a browser mechanism which enables controlled access to resources located outside of a given domain.
@@ -13,7 +13,7 @@ const Blog = () => {
                   
                 </div>
             </div>
-            <div className="card w-96 bg-slate-400 text-primary-content lg:mx-5 mt-2 ">
+            <div className="card w-80 bg-slate-400 text-primary-content lg:mx-5 mt-2 ">
                 <div className="card-body">
                     <h2 className="card-title"> Why are you using firebase? What other options do you have to implement authentication?</h2>
                     <p> iam using firebase because it is easy to use 
@@ -24,7 +24,7 @@ const Blog = () => {
                   
                 </div>
             </div>
-            <div className="card w-96 bg-slate-400 text-primary-content lg:mx-5 mt-2 ">
+            <div className="card w-80 bg-slate-400 text-primary-content lg:mx-5 mt-2 ">
                 <div className="card-body">
                     <h2 className="card-title"> How does the private route work?</h2>
                     <p>

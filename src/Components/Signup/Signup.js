@@ -40,6 +40,7 @@ const Signup = () => {
     createUser(email, password)
       .then((userCredential) => {    
         userproflie(name,img)
+
         navigate(from, { replace: true });
       }
       )

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import { authContex } from '../../Contexs/UserContext';
 import google from "../img/google.png"
@@ -9,6 +9,7 @@ import { Link, useLocation, useNavigate} from 'react-router-dom';
 
 const Login = () => {
   const { login ,googlepop,facebookPop} = useContext(authContex)
+   const [error,setEror] = useState("")
    
   let navigate = useNavigate();
   let location = useLocation();
@@ -43,7 +44,7 @@ const Login = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+        setEror(errorMessage)
       })
 
   }
@@ -82,6 +83,9 @@ const Login = () => {
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
               </div>
+              {
+                error && <p className='text-red-500'>{error}</p>
+              }
               <div className='flex m-4'>
                 <button
                  onClick={handelfacebook}

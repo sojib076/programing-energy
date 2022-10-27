@@ -51,8 +51,8 @@ const Courseinfo = () => {
                     </ol>
                 </div>)
             }
-            <p className='text-blue-700 m-4'> To Know More Get Primium</p>
-            <Link to={`/checkout/${id}`}><button className='btn btn-info mb-5' > Get Primium Acces</button></Link>
+            <p className='text-blue-700 m-4'> To Know More  Premium access</p>
+            <Link to={`/checkout/${id}`}><button className='btn btn-info mb-5' > Get Premium access</button></Link>
         </div>
     );
 };

@@ -20,18 +20,18 @@ import Profile from "../Profile/Profile"
         { path: '/signup', element: <Signup/> },
         { path: '*', element: <Error/> },
           {path:'/courses', loader: ()=>{   
-          return fetch('http://localhost:5000/courses')
+          return fetch('https://assingment-server.vercel.app/courses')
           } ,element:<Courses></Courses> },
           {path:'blog', element:<Blog> </Blog>},
           {path:'/faq', element:<FAQ></FAQ>},
         { path:'checkout/:id', 
         loader:({params})=>{ 
-          return fetch(`http://localhost:5000/details/${params.id}`)
+          return fetch(`https://assingment-server.vercel.app/details/${params.id}`)
         },
         element:<PrivateRoute> <Secure> </Secure> </PrivateRoute> },
         {path:'course/:id', 
         loader:({params})=>{ 
-          return fetch(`http://localhost:5000/details/${params.id}`)
+          return fetch(`https://assingment-server.vercel.app/details/${params.id}`)
         }, 
         element:<Courseinfo></Courseinfo> },
         {path:'profile', element:<PrivateRoute> <Profile></Profile> </PrivateRoute> }
