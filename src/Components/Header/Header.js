@@ -33,7 +33,7 @@ const Header = () => {
                         <li><Link to={'/courses'}>Courses</Link></li>
                         <li><Link to={'/blog'}>Blog</Link></li>
                         <li><Link to={'/faq'}>FAQ</Link></li>
-                        <li>{user?.displayName}</li>
+                    
                  
                     </ul>
                 </div>
@@ -45,7 +45,7 @@ const Header = () => {
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
                                 
-                                <img  src={user?.photoURL}alt="" />
+                                <img  src={user?.photoURL}alt="" title={user?.displayName} />
                             </div>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
