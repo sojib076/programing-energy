@@ -30,7 +30,7 @@ const Header = () => {
                     {/* A fancy name for website */}
                     <Link to={'/home'} >
 
-                        <span className="text-lg font-bold text-slate-500"> Progaming Edu</span>
+                        <span className="text-lg font-bold text-slate-500"> Progaming Energy</span>
                     </Link>
                 </div>
                 <div onClick={isdark}>

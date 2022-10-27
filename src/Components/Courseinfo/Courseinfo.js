@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import { PencilSquareIcon, ArrowDownIcon } from '@heroicons/react/24/solid'
+import { PencilSquareIcon, ArrowDownIcon, } from '@heroicons/react/24/solid'
 import "./sojib.css"
 import Pdf from "react-to-pdf";
 const ref = React.createRef();
@@ -14,7 +14,7 @@ const Courseinfo = () => {
     return (
         <div className='shadow-2xl 'ref={ref}>
             <Pdf targetRef={ref} filename="code-example.pdf" options={options}  >
-                {({ toPdf }) => <button className='btn btn-outline' onClick={toPdf}>Generate Pdf</button>}
+                {({ toPdf }) => <button className='btn btn-outline' onClick={toPdf}>Get Pdf</button>}
             </Pdf>
             <div  className='w-[90%] mx-auto'>
                 <div className="hero  bg-base-200" >
