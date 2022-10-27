@@ -24,7 +24,19 @@ const Blog = () => {
                   
                 </div>
             </div>
-    
+            <div className="card w-96 bg-slate-400 text-primary-content lg:mx-5 mt-2 ">
+                <div className="card-body">
+                    <h2 className="card-title"> How does the private route work?</h2>
+                    <p>
+                        private route is a route that is only accessible to authenticated users.
+                        private route work by checking if the user is authenticated or not.
+                        if the user is authenticated then the private route will be rendered.
+                        if the user is not authenticated then the private route will be redirected to login page.
+                        
+                    </p>
+                  
+                </div>
+            </div>
             <div className="card w-96 bg-slate-400 text-primary-content lg:mx-5 mt-2 ">
                 <div className="card-body">
                     <h2 className="card-title"> What is Node? How does Node work?</h2>
