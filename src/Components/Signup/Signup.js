@@ -67,9 +67,9 @@ const Signup = () => {
             <h1 className='text-2xl'>Sign Up NOW</h1>
             <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Name</span>
+                  <span className="label-text"> Full Name</span>
                 </label>
-                <input type="text" placeholder="Name" className="input input-bordered" name='name' />
+                <input type="text" placeholder=" Full Name" className="input input-bordered" name='name' />
             </div>
             <div className="form-control">
                 <label className="label">
@@ -89,9 +89,8 @@ const Signup = () => {
                 </label>
                 <input type="text" placeholder="password" className="input input-bordered" name='password' />
                 <label className="label">
-                  {/* <a  className="label-text-alt link link-hover">Forgot password?</a> */}
-                  <Link >Forgot password?</Link>
-                  <Link to={'/signup'}>  Create A Account </Link>
+            
+                  <Link to={'/login'}>  Have a Acoount? Login </Link>
                 </label>
 
               </div>

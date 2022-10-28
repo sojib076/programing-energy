@@ -28,7 +28,10 @@ const Login = () => {
     facebookPop()
     .then(result => {
       navigate(from, { replace: true });
-    } )
+    }).then(error => { 
+
+      console.log(error.message);
+    })
   } 
 
   const handelsubmit = (e) => {
@@ -76,7 +79,7 @@ const Login = () => {
                 <label className="label">
                   {/* <a  className="label-text-alt link link-hover">Forgot password?</a> */}
                   <Link >Forgot password?</Link>
-                  <Link to={'/signup'}>  Create A Account </Link>
+                  <Link to={'/signup'}>  Sign Up Now </Link>
                 </label>
 
               </div>
