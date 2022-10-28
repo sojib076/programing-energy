@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Blog = () => {
+    // this section for blog ans show all blog
     return (
         <div className='lg:flex overflow-hidden ' >
             <div className="card w-80 bg-slate-400 text-primary-content ">

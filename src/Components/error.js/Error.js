@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './error.css'
 
 const Error = () => {
+    // this route is for showing errors
     return (
         <div className='noFounderr '>
                     <div> 

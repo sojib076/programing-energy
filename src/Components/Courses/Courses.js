@@ -3,6 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import Singlecourse from '../Singlecourse/Singlecourse';
 
 const Courses = () => {
+  // loader data from load
     const alldatas = useLoaderData()
   
     return (

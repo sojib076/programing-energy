@@ -9,18 +9,20 @@ const auth = getAuth(app)
 const provider = new GoogleAuthProvider()
 const facebookPro = new FacebookAuthProvider()
 export const authContex = createContext()
-
+// this is a context for user data
 const UserContext = ({ children }) => {
     const [user, setUser] = useState([])
         const [loading,setLoading] = useState(true)
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password)
     }
+    // user create with email and password
     const login = (email, password) => { 
                     setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
        
     }
+    // this for user profile update
     const userproflie = (name,img) => {
         setLoading(false)
         return updateProfile( auth.currentUser, {
@@ -30,14 +32,17 @@ const UserContext = ({ children }) => {
         
      }
 
+    //  this for google login
     const googlepop = () => {
  
         return signInWithPopup(auth, provider)
     }
+    // this for facebook login
         const facebookPop = () => { 
             return signInWithPopup(auth, facebookPro)
         }
 
+//  this observer for checking user is logged in or not
     useEffect(()=>{ 
         const unsubscribed = onAuthStateChanged(auth,user => {
                 setUser(user)
@@ -47,7 +52,7 @@ const UserContext = ({ children }) => {
         return () => unsubscribed()
     },[])
 
-
+  // this for logout
     const logout = () => { 
         setLoading(true)
         return signOut(auth)

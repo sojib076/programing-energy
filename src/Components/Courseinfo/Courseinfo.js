@@ -5,18 +5,22 @@ import "./sojib.css"
 import Pdf from "react-to-pdf";
 const ref = React.createRef();
 const Courseinfo = () => {
+    // we get the data from the server and display it
     const cousedetails = useLoaderData()
+
     const { id, details, image, name, description, learn } = cousedetails
     const options = {
         orientation: 'landscape',
     };
 
     return (
+        //  get pdf & print 
         <div className='shadow-2xl 'ref={ref}>
             <Pdf targetRef={ref} filename="code-example.pdf" options={options}  >
                 {({ toPdf }) => <button className='btn btn-outline' onClick={toPdf}
                 ><ArrowDownIcon/>PDF</button>}
             </Pdf>
+            {/* dynamic for all  course infos   */}
             <div  className='w-[90%] mx-auto'>
                 <div className="hero  bg-base-200" >
                     <div className="hero-content flex-col lg:flex-row">

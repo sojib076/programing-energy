@@ -15,7 +15,7 @@ const Home = () => {
 
     return (
         <div className='overflow-hidden'>
-
+                {/* this for swiper js to show slider */}
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper ">
                 <SwiperSlide >
                     <div className='course-bg  flex flex-col justify-center'>
@@ -95,7 +95,9 @@ const Home = () => {
 
                 </SwiperSlide>
             </Swiper>
+            {/* slider section end */}
 
+            {/* this section is for upcoming course */}
             <section className=' m-5 bg-[#ACB0EF] p-5'>
                 <h1 className='lg:text-5xl text-xl'>A broad selection of New courses Coming Soon</h1>
                 <div>
@@ -144,11 +146,8 @@ const Home = () => {
 
                 </div>
             </section>
-            {/* course0*/}
+            {/* upcoming course end*/}
                  
-                 <section> 
-                    
-                 </section>
         
 
 

@@ -19,11 +19,13 @@ import Profile from "../Profile/Profile"
         { path: '/login', element: <Login/> },
         { path: '/signup', element: <Signup/> },
         { path: '*', element: <Error/> },
+         // load data from APi
           {path:'/courses', loader: ()=>{   
           return fetch('https://assingment-server.vercel.app/courses')
           } ,element:<Courses></Courses> },
           {path:'blog', element:<Blog> </Blog>},
           {path:'/faq', element:<FAQ></FAQ>},
+          // load data from APi
         { path:'checkout/:id', 
         loader:({params})=>{ 
           return fetch(`https://assingment-server.vercel.app/details/${params.id}`)
