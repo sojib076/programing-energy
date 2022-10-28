@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { authContex } from '../../Contexs/UserContext';
 import { MoonIcon ,SunIcon} from '@heroicons/react/24/solid'
 import './Header.css'
+ import logo from "./android-chrome-192x192.png"
 
 
 const Header = () => {
@@ -28,14 +29,14 @@ const Header = () => {
                             <li><Link to={'/faq'}>FAQ</Link></li>
                         </ul>
                     </div>
-                    {/* A fancy name for website */}
+                    <img src={logo} alt="" srcset="" className='w-[30px] lg:w-[8%]' />
                     <Link to={'/home'} >
 
                  <span className="text-lg font-bold text-slate-500 logo">  
-                 <span className='text-4xl font-thin'>P</span>rogaming<span className='text-3xl'> E</span>nergy</span>
+                 <span className='text-3xl font-thin'>P</span>rogaming<span className='text-3xl'> E</span>nergy</span>
                     </Link>
                 </div>
-                <div onClick={isdark}>
+                <div onClick={isdark} className="ml-5">
                            { 
                                  dark ? <MoonIcon className='w-5 h-5'></MoonIcon> : <SunIcon className='w-5 h-5'></SunIcon>
                            }
