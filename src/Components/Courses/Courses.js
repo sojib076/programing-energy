@@ -4,7 +4,7 @@ import Singlecourse from '../Singlecourse/Singlecourse';
 
 const Courses = () => {
     const alldatas = useLoaderData()
-    console.log(alldatas);
+  
     return (
         <div className='bg-[#ACB0EF]'>
             <div className='lg:grid lg:grid-cols-3 '> 

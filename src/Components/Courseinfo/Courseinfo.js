@@ -14,7 +14,8 @@ const Courseinfo = () => {
     return (
         <div className='shadow-2xl 'ref={ref}>
             <Pdf targetRef={ref} filename="code-example.pdf" options={options}  >
-                {({ toPdf }) => <button className='btn btn-outline' onClick={toPdf}>Get Pdf</button>}
+                {({ toPdf }) => <button className='btn btn-outline' onClick={toPdf}
+                ><ArrowDownIcon/>PDF</button>}
             </Pdf>
             <div  className='w-[90%] mx-auto'>
                 <div className="hero  bg-base-200" >
