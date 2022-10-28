@@ -18,7 +18,7 @@ const Home = () => {
 
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper ">
                 <SwiperSlide >
-                    <div className='course-bg ] flex flex-col justify-center'>
+                    <div className='course-bg  flex flex-col justify-center'>
                         <h1 className='lg:text-5xl 0'> Bored at Home?</h1>
                         <p className='lg:text-2xl text-yellow-200'>We have the best solution for you</p>
                         <p className='text-2xl text-yellow-200'>Join our courses now</p>
@@ -43,10 +43,12 @@ const Home = () => {
 
                 </SwiperSlide>
                 <SwiperSlide >
-                    <div className='course-bg  flex flex-col justify-center'>
-                        <h1 className='lg:text-5xl text-yellow-300'> Bored at Home?</h1>
-                        <p className='lg:text-2xl '>We have the best solution for you</p>
-                        <p className='text-2xl text-yellow-200'>Join our courses now</p>
+                    <div className='course-bgtwo  flex flex-col justify-center'>
+                        <h1 className='lg:text-4xl text-[#747ceb] '> Learn From Home</h1>
+                        <p className='lg:text-2xl text-[#14184b] '>  
+                            100% Online Courses
+                        </p>
+                        <p className='text-2xl text-[#747ceb]'>Join our courses now</p>
                         <br></br>
                         <div>
                             <Link to='/courses' >
@@ -68,10 +70,10 @@ const Home = () => {
 
                 </SwiperSlide>
                 <SwiperSlide >
-                    <div className='course-bg lg:h-[100vh] flex flex-col justify-center'>
-                        <h1 className='lg:text-5xl text-yellow-300'> Bored at Home?</h1>
-                        <p className='lg:text-2xl text-yellow-200'>We have the best solution for you</p>
-                        <p className='text-2xl text-yellow-200'>Join our courses now</p>
+                    <div className='course-bgthree lg:h-[100vh] flex flex-col justify-center'>
+                        <h1 className='lg:text-5xl text-yellow-300'> So Why are you waiting??</h1>
+                        <p className='lg:text-2xl text-yellow-200'> Join now and get 30 % Discout</p>
+                        <p className='text-2xl text-white font-bold'> Promo Code: <span className='text-xl te'>PED30%</span></p>
                         <br></br>
                         <div>
                             <Link to='/courses' >

@@ -25,6 +25,24 @@ body {
     width: 100%;
     height: 90vh;
 }
+.course-bgtwo{
+  background-image: url('https://cdn.dribbble.com/users/13754/screenshots/10514046/media/75036ca28a43caf66b984a250bd1b39b.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 90vh;
+}
+.course-bgthree{
+ background-image: url('https://miro.medium.com/max/720/0*AvyUiisScpwQ28e7.png');
+
+  background-position: cover;
+
+  width: 100%;
+  height: 90vh;
+}
+.course-bgthree button{
+  background-color:#ACB0EF;
+}
 
 .swiper-slide {
   text-align: center;
