@@ -34,8 +34,7 @@ const UserContext = ({ children }) => {
 
     //  this for google login
     const googlepop = () => {
- 
-        return signInWithPopup(auth, provider)
+        return signInWithPopup(auth,provider)
     }
     // this for facebook login
         const facebookPop = () => { 
