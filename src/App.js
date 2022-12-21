@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouterProvider } from 'react-router-dom';
-
+import toast, { Toaster } from 'react-hot-toast';
 
 import './App.css'
 
@@ -12,6 +12,7 @@ const App = () => {
   return (
     <div className='App'>
       <RouterProvider router={route}> </RouterProvider>
+      <Toaster/>
     </div>
   );
 };

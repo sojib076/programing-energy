@@ -5,11 +5,12 @@ import google from "../img/google.png"
 import facebook from "../img/facebook.svg"
 import loginpic from "../img/login.svg"
 import { Link, useLocation, useNavigate} from 'react-router-dom';
+import { toast } from 'react-hot-toast';
 
 
 const Login = () => {
   const { login ,googlepop,facebookPop} = useContext(authContex)
-   const [error,setEror] = useState("")
+
    
   let navigate = useNavigate();
   let location = useLocation();
@@ -29,7 +30,6 @@ const Login = () => {
     .then(result => {
       navigate(from, { replace: true });
     }).then(error => { 
-
       console.log(error.message);
     })
   } 
@@ -45,9 +45,12 @@ const Login = () => {
       }
       )
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        setEror(errorMessage)
+        if (error.code === "auth/wrong-password") {
+          toast.error("Wrong password");
+        }else if(error.code === "auth/user-not-found"){
+          toast.error("User not found");}else if(error.code === "auth/invalid-email"){
+            toast.error("Invalid email");
+          }
       })
 
   }
@@ -86,9 +89,7 @@ const Login = () => {
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
               </div>
-              {
-                error && <p className='text-red-500'>{error}</p>
-              }
+           
               <div className='flex m-4'>
                 <button
                  onClick={handelfacebook}
